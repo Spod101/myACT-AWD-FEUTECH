@@ -7,6 +7,34 @@ body {
     background-color: #010101;
 }
 
+/* HEADER */
+header{
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 70px 1fr 50px;
+    grid-template-rows: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header .logo{
+    font-weight: bold;
+}
+
+header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    font-weight: 500;
+}
+
 /* SLIDER */
 .slider{
     height: 100vh;
@@ -130,7 +158,7 @@ body {
 }
 
 .thumbnail .item{
-    width: 150px;
+    width: 142px;
     height: 220px;
     filter: brightness(0.5);
     transition: 0.5s;

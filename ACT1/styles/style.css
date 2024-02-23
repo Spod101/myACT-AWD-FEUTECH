@@ -32,17 +32,18 @@
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
-        transition: 20s;
+        transition: 3s;
         opacity: 0;
         pointer-events: none;
-        width: 100%;
-        height: 100%;
-        clip-path: polygon(50% 0%, 100% 35%, 85% 86%, 50% 100%, 15% 86%, 0% 35%);
-        }
+        width: 10%;
+        height: 10%;
+        clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    }
     
     .container span:hover::before{
-    transition: 0s;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
+        transition: 0s;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(50% at 50% 50%);
     }
