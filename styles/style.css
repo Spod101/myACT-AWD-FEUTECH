@@ -10,29 +10,26 @@ body {
 /* HEADER */
 header{
     width: 1200px;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
-    display: grid;
-    grid-template-columns: 70px 1fr 50px;
-    grid-template-rows: 50px;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 100;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.233);
 }
 
 header .logo{
+    display: flex;
     font-weight: bold;
+    justify-content: center;
 }
 
-header .menu{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: right;
-    gap: 20px;
-    font-weight: 500;
+img{
+    width: 40px;
+    height: 40px;
 }
 
 /* SLIDER */
