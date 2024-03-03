@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#033528, #00f7ff); /* Updated background color */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: black;
+    font-size: 1rem;
+    color: white;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 5px 5px 0 black;
+    z-index: 1;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0, .37, .21, .91);
+    text-align: center;
+    border-radius: 10px;
+
+    &:active {
+        box-shadow: 0 0 0 black;
+    }
+}
+
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: inherit;
+    position: relative;
+    color: transparent;
+
+    &::after {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        content: attr(data-count);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: cornflowerblue;
+        position: absolute;
+        top: -5px;
+        right: 5px;
+        transition: all 0.3s cubic-bezier(0, .37, .21, .91);
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    &::before {
+        content: "\f0f3";
+        font-family: "Font Awesome 5 Free";
+        display: block;
+        color: #000000;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    &.count::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &.notify::before {
+        animation: bell 0.5s ease-in-out;
+    }
+}
+
+@keyframes bell {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(5deg);
+    }
+    20% {
+        transform: rotate(-5deg);
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    70% {
+        transform: rotate(-5deg);
+    }
+    80% {
+        transform: rotate(5deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }}
+
