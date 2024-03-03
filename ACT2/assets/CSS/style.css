@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e2a1ca, #1f64bb);
+}
+
+.letters {
+    perspective: 1000px;
+    color: rgb(252, 252, 253);
+
+    .letter{
+        overflow: hidden;
+        display: inline-block;
+        user-select: none;
+        line-height: 0.8;
+        font-size: 5rem;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+
+        &.active {
+            animation: jump 1s ease-in-out;
+            transform-origin: bottom left;
+        }
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0, 0) rotate(180deg);
+    }
+    25% {
+        transform: scale(2) translate(0,-150px);
+    }
+    75% {
+        transform: scale(1,1) translate(0,200px);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
